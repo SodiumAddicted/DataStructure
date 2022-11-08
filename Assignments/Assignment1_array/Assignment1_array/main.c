@@ -7,6 +7,7 @@ int main(int argc, const char * argv[]) {//HOW TO USE: ./a.out array1row array1c
     {
         printf("USAGE : %s arr1row arr1col arr2row arr2col option(option can be omitted)\n", argv[0]);
         printf("OPTIONS : sparse");
+        exit(1);
     }
     srand((unsigned int)time(0)); //난수화
     
@@ -51,7 +52,6 @@ int main(int argc, const char * argv[]) {//HOW TO USE: ./a.out array1row array1c
                 //힙영역 메모리 해제
                 free(mat1.data);
                 free(mat2.data);
-                free(result.data);
                 return 0;
                 break;
             case 1:
@@ -59,24 +59,28 @@ int main(int argc, const char * argv[]) {//HOW TO USE: ./a.out array1row array1c
                 end = clock();
                 printf("\nMatrix1 + Matrix2 = \n");
                 ShowMatrixDetail(&result);
+                free(result.data);
                 break;
             case 2:
                 result = MatSub(&mat1,&mat2);
                 end = clock();
                 printf("\nMatrix1 - Matrix2 = \n");
                 ShowMatrixDetail(&result);
+                free(result.data);
                 break;
             case 3:
                 result = MatMul(&mat1,&mat2);
                 end = clock();
                 printf("\nMatrix1 * Matrix2 = \n");
                 ShowMatrixDetail(&result);
+                free(result.data);
                 break;
             case 4:
                 result = MatDiv(&mat1,&mat2);
                 end = clock();
                 printf("\nMatrix1 / Matrix2 = \n");
                 ShowMatrixDetaildouble(&result);
+                free(result.fdata);
                 break;
             case 5:
                 result = ToSparseMatrix(&mat1);
@@ -86,6 +90,7 @@ int main(int argc, const char * argv[]) {//HOW TO USE: ./a.out array1row array1c
                 result = ToSparseMatrix(&mat2);
                 printf("\nMatrix2's sparse formation\n");
                 ShowMatrixDetail(&result);
+                free(result.data);
                 break;
             case 6:
                 result = ToTransposition(&mat1);
@@ -95,6 +100,7 @@ int main(int argc, const char * argv[]) {//HOW TO USE: ./a.out array1row array1c
                 result = ToTransposition(&mat2);
                 printf("\nMatrix2's transposition formation\n");
                 ShowMatrixDetail(&result);
+                free(result.data);
                 break;
             case 7:
                 printf("USAGE : arr1row arr1col arr2row arr2col\n");
