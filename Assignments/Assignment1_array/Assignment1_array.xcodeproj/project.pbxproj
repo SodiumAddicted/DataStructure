@@ -7,11 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		EE5472B0290FB57100593156 /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = EE5472AF290FB57100593156 /* main.c */; };
+		EE215C9F291A31F000412872 /* Operators.c in Sources */ = {isa = PBXBuildFile; fileRef = EE215C9E291A31F000412872 /* Operators.c */; };
+		EE215CA1291A3DD300412872 /* ToTransposition.c in Sources */ = {isa = PBXBuildFile; fileRef = EE215CA0291A3DD300412872 /* ToTransposition.c */; };
+		EED495352919E9CB00663EDB /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = EED495342919E9CB00663EDB /* main.c */; };
+		EED4953D2919EED400663EDB /* CreateRandMatrix.c in Sources */ = {isa = PBXBuildFile; fileRef = EED4953C2919EED400663EDB /* CreateRandMatrix.c */; };
+		EED4953F2919F00400663EDB /* ShowMatrixDetail.c in Sources */ = {isa = PBXBuildFile; fileRef = EED4953E2919F00400663EDB /* ShowMatrixDetail.c */; };
+		EED495452919F75600663EDB /* ToSparseMatrix.c in Sources */ = {isa = PBXBuildFile; fileRef = EED495442919F75600663EDB /* ToSparseMatrix.c */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		EE5472AA290FB57100593156 /* CopyFiles */ = {
+		EED4952F2919E9CB00663EDB /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = /usr/share/man/man1/;
@@ -23,12 +28,18 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		EE5472AC290FB57100593156 /* 1031test */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = 1031test; sourceTree = BUILT_PRODUCTS_DIR; };
-		EE5472AF290FB57100593156 /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
+		EE215C9E291A31F000412872 /* Operators.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = Operators.c; sourceTree = "<group>"; };
+		EE215CA0291A3DD300412872 /* ToTransposition.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = ToTransposition.c; sourceTree = "<group>"; };
+		EED495312919E9CB00663EDB /* Assignment1_array */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Assignment1_array; sourceTree = BUILT_PRODUCTS_DIR; };
+		EED495342919E9CB00663EDB /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
+		EED4953B2919E9DE00663EDB /* Matrix.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Matrix.h; sourceTree = "<group>"; };
+		EED4953C2919EED400663EDB /* CreateRandMatrix.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = CreateRandMatrix.c; sourceTree = "<group>"; };
+		EED4953E2919F00400663EDB /* ShowMatrixDetail.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = ShowMatrixDetail.c; sourceTree = "<group>"; };
+		EED495442919F75600663EDB /* ToSparseMatrix.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = ToSparseMatrix.c; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		EE5472A9290FB57100593156 /* Frameworks */ = {
+		EED4952E2919E9CB00663EDB /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -38,65 +49,71 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		EE5472A3290FB57100593156 = {
+		EED495282919E9CA00663EDB = {
 			isa = PBXGroup;
 			children = (
-				EE5472AE290FB57100593156 /* 1031test */,
-				EE5472AD290FB57100593156 /* Products */,
+				EED495332919E9CB00663EDB /* Assignment1_array */,
+				EED495322919E9CB00663EDB /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		EE5472AD290FB57100593156 /* Products */ = {
+		EED495322919E9CB00663EDB /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				EE5472AC290FB57100593156 /* 1031test */,
+				EED495312919E9CB00663EDB /* Assignment1_array */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		EE5472AE290FB57100593156 /* 1031test */ = {
+		EED495332919E9CB00663EDB /* Assignment1_array */ = {
 			isa = PBXGroup;
 			children = (
-				EE5472AF290FB57100593156 /* main.c */,
+				EED4953B2919E9DE00663EDB /* Matrix.h */,
+				EED495342919E9CB00663EDB /* main.c */,
+				EE215C9E291A31F000412872 /* Operators.c */,
+				EED4953E2919F00400663EDB /* ShowMatrixDetail.c */,
+				EED4953C2919EED400663EDB /* CreateRandMatrix.c */,
+				EED495442919F75600663EDB /* ToSparseMatrix.c */,
+				EE215CA0291A3DD300412872 /* ToTransposition.c */,
 			);
-			path = 1031test;
+			path = Assignment1_array;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		EE5472AB290FB57100593156 /* 1031test */ = {
+		EED495302919E9CB00663EDB /* Assignment1_array */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = EE5472B3290FB57100593156 /* Build configuration list for PBXNativeTarget "1031test" */;
+			buildConfigurationList = EED495382919E9CB00663EDB /* Build configuration list for PBXNativeTarget "Assignment1_array" */;
 			buildPhases = (
-				EE5472A8290FB57100593156 /* Sources */,
-				EE5472A9290FB57100593156 /* Frameworks */,
-				EE5472AA290FB57100593156 /* CopyFiles */,
+				EED4952D2919E9CB00663EDB /* Sources */,
+				EED4952E2919E9CB00663EDB /* Frameworks */,
+				EED4952F2919E9CB00663EDB /* CopyFiles */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = 1031test;
-			productName = 1031test;
-			productReference = EE5472AC290FB57100593156 /* 1031test */;
+			name = Assignment1_array;
+			productName = Assignment1_array;
+			productReference = EED495312919E9CB00663EDB /* Assignment1_array */;
 			productType = "com.apple.product-type.tool";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		EE5472A4290FB57100593156 /* Project object */ = {
+		EED495292919E9CA00663EDB /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 1170;
 				ORGANIZATIONNAME = MAC;
 				TargetAttributes = {
-					EE5472AB290FB57100593156 = {
+					EED495302919E9CB00663EDB = {
 						CreatedOnToolsVersion = 11.7;
 					};
 				};
 			};
-			buildConfigurationList = EE5472A7290FB57100593156 /* Build configuration list for PBXProject "1031test" */;
+			buildConfigurationList = EED4952C2919E9CA00663EDB /* Build configuration list for PBXProject "Assignment1_array" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -104,29 +121,34 @@
 				en,
 				Base,
 			);
-			mainGroup = EE5472A3290FB57100593156;
-			productRefGroup = EE5472AD290FB57100593156 /* Products */;
+			mainGroup = EED495282919E9CA00663EDB;
+			productRefGroup = EED495322919E9CB00663EDB /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				EE5472AB290FB57100593156 /* 1031test */,
+				EED495302919E9CB00663EDB /* Assignment1_array */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		EE5472A8290FB57100593156 /* Sources */ = {
+		EED4952D2919E9CB00663EDB /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EE5472B0290FB57100593156 /* main.c in Sources */,
+				EE215CA1291A3DD300412872 /* ToTransposition.c in Sources */,
+				EED4953F2919F00400663EDB /* ShowMatrixDetail.c in Sources */,
+				EED495352919E9CB00663EDB /* main.c in Sources */,
+				EED4953D2919EED400663EDB /* CreateRandMatrix.c in Sources */,
+				EE215C9F291A31F000412872 /* Operators.c in Sources */,
+				EED495452919F75600663EDB /* ToSparseMatrix.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
-		EE5472B1290FB57100593156 /* Debug */ = {
+		EED495362919E9CB00663EDB /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -184,7 +206,7 @@
 			};
 			name = Debug;
 		};
-		EE5472B2290FB57100593156 /* Release */ = {
+		EED495372919E9CB00663EDB /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -235,7 +257,7 @@
 			};
 			name = Release;
 		};
-		EE5472B4290FB57100593156 /* Debug */ = {
+		EED495392919E9CB00663EDB /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
@@ -243,7 +265,7 @@
 			};
 			name = Debug;
 		};
-		EE5472B5290FB57100593156 /* Release */ = {
+		EED4953A2919E9CB00663EDB /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
@@ -254,25 +276,25 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		EE5472A7290FB57100593156 /* Build configuration list for PBXProject "1031test" */ = {
+		EED4952C2919E9CA00663EDB /* Build configuration list for PBXProject "Assignment1_array" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				EE5472B1290FB57100593156 /* Debug */,
-				EE5472B2290FB57100593156 /* Release */,
+				EED495362919E9CB00663EDB /* Debug */,
+				EED495372919E9CB00663EDB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		EE5472B3290FB57100593156 /* Build configuration list for PBXNativeTarget "1031test" */ = {
+		EED495382919E9CB00663EDB /* Build configuration list for PBXNativeTarget "Assignment1_array" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				EE5472B4290FB57100593156 /* Debug */,
-				EE5472B5290FB57100593156 /* Release */,
+				EED495392919E9CB00663EDB /* Debug */,
+				EED4953A2919E9CB00663EDB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = EE5472A4290FB57100593156 /* Project object */;
+	rootObject = EED495292919E9CA00663EDB /* Project object */;
 }
