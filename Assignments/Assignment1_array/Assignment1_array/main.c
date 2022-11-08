@@ -43,33 +43,44 @@ int main(int argc, const char * argv[]) {//HOW TO USE: ./a.out array1row array1c
         printf("| 0 : 종료 | 1 : 덧셈 | 2 : 뺄셈 | 3 : 곱셈 | 4 : 나눗셈 |\n|  5 : 희소행렬형변환  |  6 : 전치행렬화  |  7 : 새로운행렬  |\n");
         printf("INPUT : ");
         scanf("%d", &userinput);
+        clock_t start = clock();
+        clock_t end;
         switch(userinput){
             case 0:
                 printf("프로그램을 종료합니다.\n");
+                //힙영역 메모리 해제
+                free(mat1.data);
+                free(mat2.data);
+                free(result.data);
                 return 0;
                 break;
             case 1:
                 result = MatSum(&mat1,&mat2);
+                end = clock();
                 printf("\nMatrix1 + Matrix2 = \n");
                 ShowMatrixDetail(&result);
                 break;
             case 2:
                 result = MatSub(&mat1,&mat2);
+                end = clock();
                 printf("\nMatrix1 - Matrix2 = \n");
                 ShowMatrixDetail(&result);
                 break;
             case 3:
                 result = MatMul(&mat1,&mat2);
+                end = clock();
                 printf("\nMatrix1 * Matrix2 = \n");
                 ShowMatrixDetail(&result);
                 break;
             case 4:
                 result = MatDiv(&mat1,&mat2);
+                end = clock();
                 printf("\nMatrix1 / Matrix2 = \n");
                 ShowMatrixDetaildouble(&result);
                 break;
             case 5:
                 result = ToSparseMatrix(&mat1);
+                end = clock();
                 printf("\nMatrix1's sparse formation\n");
                 ShowMatrixDetail(&result);
                 result = ToSparseMatrix(&mat2);
@@ -78,6 +89,7 @@ int main(int argc, const char * argv[]) {//HOW TO USE: ./a.out array1row array1c
                 break;
             case 6:
                 result = ToTransposition(&mat1);
+                end = clock();
                 printf("\nMatrix1's transposition formation\n");
                 ShowMatrixDetail(&result);
                 result = ToTransposition(&mat2);
@@ -108,17 +120,16 @@ int main(int argc, const char * argv[]) {//HOW TO USE: ./a.out array1row array1c
                 ShowMatrixDetail(&mat1);
                 printf("Matrix2's detail\n");
                 ShowMatrixDetail(&mat2);
+                end = clock();
                 break;
             default:
                 printf("wrong number\n");
+                end = clock();
                 break;
                 
         }
-        //힙영역 메모리 해제
-        free(mat1.data);
-        free(mat2.data);
-        free(result.data);
-        free(result.fdata);
+        printf("소요 시간: %lf\n\n", (double)(end - start) / CLOCKS_PER_SEC);
     }
+
     return 0;
 }
