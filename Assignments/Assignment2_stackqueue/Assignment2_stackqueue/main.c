@@ -1,4 +1,7 @@
-#define GL_SILENCE_DEPRECATION //OPENGL API 사용 경고 메세지 무시(왜인지 적용 안됨) - 특정 버전 이후로 지원 안됨
+//각 Probelms는 주석처리하였음
+
+
+#define GL_SILENCE_DEPRECATION //OPENGL API 사용 경고 메세지 무시(왜인지 적용 안됨) - 특정 버전 이후로 지원 안됨 - Apple은 OPENGL대신 Metal api를 권장 중.
 #define slice 100
 #include <OpenGL/gl.h>
 #include <GLUT/glut.h>
@@ -43,8 +46,10 @@ int main(int argc, const char * argv[]) {
     };
     head = CreateAbsolPoly(arr, 5);
     ShowPoly(head);
+    */
     
     //그래프 그리기
+    /*
     glutInit(&argc, argv);
     glutCreateWindow("OpenGLGraph");
     glutDisplayFunc(Draw);
@@ -67,6 +72,44 @@ int main(int argc, const char * argv[]) {
     QFree(Q);
     */
     
+    //스택 구현
+    /*
+    Stack *S = CreateNewStack(4);
+    Push(S, 'a');
+    ShowStackDetail(S);
+    Push(S, 'b');
+    ShowStackDetail(S);
+    Push(S, 'c');
+    ShowStackDetail(S);
+    Push(S, 'd');
+    ShowStackDetail(S);
+    Push(S, 'd');
+    ShowStackDetail(S);
+    Pop(S);
+    ShowStackDetail(S);
+    Pop(S);
+    ShowStackDetail(S);
+    Pop(S);
+    ShowStackDetail(S);
+    Pop(S);
+    ShowStackDetail(S);
+    */
     
+    //ParenthesisMatching구현
+    /*
+    char arr2[100] = "(((a+b)*c+d−e)/(f+g)−(h+j)*(k−l))/(m−n)";
+    ParenthesisMatching(arr2, 100);
+    
+    char arr3[100] = "(a−b*c)+d−(e−(f−g)/h)/(i*j)−k";
+    ParenthesisMatching(arr3, 100);
+    */
+    
+    //infix2postfix구현
+    char arr4[100] = "(a−b*c)+d−(e−(f−g)/h)/(i*j)−k";
+    char *result = Infix2Postfix(arr4, MAX_SIZE);
+    for(int i = 0 ; i < MAX_SIZE ; i++){
+        printf("%c", result[i]);
+    }
+    puts("");
     return 0;
 }

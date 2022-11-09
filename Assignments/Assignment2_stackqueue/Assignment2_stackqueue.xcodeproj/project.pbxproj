@@ -12,6 +12,9 @@
 		EE5D1329291AC527008D129F /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE5D1327291AC299008D129F /* OpenGL.framework */; };
 		EE5D132C291AC529008D129F /* GLUT.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE5D1325291AC292008D129F /* GLUT.framework */; };
 		EE5D132F291AD504008D129F /* QueueFunc.c in Sources */ = {isa = PBXBuildFile; fileRef = EE5D132E291AD504008D129F /* QueueFunc.c */; };
+		EE98052D291B59950022B08E /* StackFunc.c in Sources */ = {isa = PBXBuildFile; fileRef = EE98052C291B59950022B08E /* StackFunc.c */; };
+		EE98052F291B5F240022B08E /* ParenthesisMatchingFunc.c in Sources */ = {isa = PBXBuildFile; fileRef = EE98052E291B5F240022B08E /* ParenthesisMatchingFunc.c */; };
+		EE980531291B66710022B08E /* Infix2Postfix.c in Sources */ = {isa = PBXBuildFile; fileRef = EE980530291B66710022B08E /* Infix2Postfix.c */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -34,6 +37,9 @@
 		EE5D1325291AC292008D129F /* GLUT.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLUT.framework; path = System/Library/Frameworks/GLUT.framework; sourceTree = SDKROOT; };
 		EE5D1327291AC299008D129F /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
 		EE5D132E291AD504008D129F /* QueueFunc.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = QueueFunc.c; sourceTree = "<group>"; };
+		EE98052C291B59950022B08E /* StackFunc.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = StackFunc.c; sourceTree = "<group>"; };
+		EE98052E291B5F240022B08E /* ParenthesisMatchingFunc.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = ParenthesisMatchingFunc.c; sourceTree = "<group>"; };
+		EE980530291B66710022B08E /* Infix2Postfix.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = Infix2Postfix.c; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +79,9 @@
 				EE5D131A291AA7BC008D129F /* main.c */,
 				EE5D1322291AA9CC008D129F /* PolynomialFunc.c */,
 				EE5D132E291AD504008D129F /* QueueFunc.c */,
+				EE98052C291B59950022B08E /* StackFunc.c */,
+				EE98052E291B5F240022B08E /* ParenthesisMatchingFunc.c */,
+				EE980530291B66710022B08E /* Infix2Postfix.c */,
 			);
 			path = Assignment2_stackqueue;
 			sourceTree = "<group>";
@@ -145,6 +154,9 @@
 			files = (
 				EE5D131B291AA7BC008D129F /* main.c in Sources */,
 				EE5D132F291AD504008D129F /* QueueFunc.c in Sources */,
+				EE98052F291B5F240022B08E /* ParenthesisMatchingFunc.c in Sources */,
+				EE980531291B66710022B08E /* Infix2Postfix.c in Sources */,
+				EE98052D291B59950022B08E /* StackFunc.c in Sources */,
 				EE5D1323291AA9CC008D129F /* PolynomialFunc.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

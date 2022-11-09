@@ -8,6 +8,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
+#define MAX_SIZE 100
 
 typedef struct polynomial{//연결리스트 구현
     struct polynomial *next;
@@ -22,6 +23,12 @@ typedef struct queue{//char큐 구현
     int lastop; //enqueue 1 dequeue 0
     char *data;
 }Queue;
+
+typedef struct stack{//char스택 구현
+    int size;
+    int top;
+    char *data;
+}Stack;
 
 int isEmpty(Poly *head);
 Poly *CreateAbsolPoly(double arr[][2], int count);
@@ -43,5 +50,16 @@ void ShowQueueDetail(Queue *Q);
 void Enqueue(Queue *Q, char alpha);
 char Dequeue(Queue *Q);
 void QFree(Queue *Q);
+
+Stack *CreateNewStack(int size);
+int isSFull(Stack *S);
+int isSEmpty(Stack *S);
+void Push(Stack *S, char c);
+char Pop(Stack *S);
+void ShowStackDetail(Stack *S);
+void SFree(Stack *S);
+
+void ParenthesisMatching(char arr[], int size);
+char *Infix2Postfix(char arr[], int size);
 
 #endif /* StackQueue_h */
