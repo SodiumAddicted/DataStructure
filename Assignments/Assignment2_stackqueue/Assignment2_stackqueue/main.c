@@ -105,11 +105,13 @@ int main(int argc, const char * argv[]) {
     */
     
     //infix2postfix구현
+    /*
     char arr4[100] = "(a−b*c)+d−(e−(f−g)/h)/(i*j)−k";
     char *result = Infix2Postfix(arr4, MAX_SIZE);
     for(int i = 0 ; i < MAX_SIZE ; i++){
         printf("%c", result[i]);
     }
     puts("");
+    */
     return 0;
 }

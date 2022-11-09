@@ -54,5 +54,6 @@ void ShowStackDetail(Stack *S){
 }
 
 void SFree(Stack *S){
-    
+    free(S -> data);
+    free(S);
 }

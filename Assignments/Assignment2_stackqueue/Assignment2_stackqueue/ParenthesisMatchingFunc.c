@@ -32,4 +32,5 @@ void ParenthesisMatching(char arr[], int size){
     else{
         printf("UNMATCHING!\n");
     }
+    SFree(SParenthesis);
 }

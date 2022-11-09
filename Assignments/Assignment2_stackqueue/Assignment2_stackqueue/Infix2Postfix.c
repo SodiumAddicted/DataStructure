@@ -73,6 +73,7 @@ char *Infix2Postfix(char arr[], int size){
         count++;
         //printf("%c",Pop(Operator));
     }
+    SFree(Operator);
     return result;
 }
 
