@@ -46,6 +46,7 @@ int main(int argc, const char * argv[]) {
     };
     head = CreateAbsolPoly(arr, 5);
     ShowPoly(head);
+    free(head);
     */
     //근 구하기
     /*
@@ -110,10 +111,10 @@ int main(int argc, const char * argv[]) {
     */
     
     //ParenthesisMatching구현
-    /*
+    
     char arr2[100] = "(((a+b)*c+d−e)/(f+g)−(h+j)*(k−l))/(m−n)";
     ParenthesisMatching(arr2, 100);
-    
+    /*
     char arr3[100] = "(a−b*c)+d−(e−(f−g)/h)/(i*j)−k";
     ParenthesisMatching(arr3, 100);
     */

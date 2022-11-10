@@ -52,7 +52,6 @@ char Dequeue(Queue *Q){
 
 
 void ShowQueueDetail(Queue *Q){
-    printf("+::QUEUE DETAIL::+\n");
     printf("rear:%d front:%d size:%d lastop:%d\n", Q -> rear, Q -> front, Q -> size, Q -> lastop);
     for(int i = 0 ; i < Q -> size ; i++){
         printf("%c ", Q -> data[i]);

@@ -45,7 +45,6 @@ char Pop(Stack *S){
 }
 
 void ShowStackDetail(Stack *S){
-    printf("\n+::STACK DETAIL::+\n");
     printf("Bottom -> Top\n");
     for(int i = 0 ; i < S -> top + 1 ; i++){
         printf("%c ", S -> data[i]);
