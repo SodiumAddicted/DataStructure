@@ -30,6 +30,7 @@ typedef struct stack{//char스택 구현
     char *data;
 }Stack;
 
+
 int isEmpty(Poly *head);
 Poly *CreateAbsolPoly(double arr[][2], int count);
 Poly *CreateNewHead(void);
@@ -42,6 +43,8 @@ void SwapNode(Poly *a, Poly *b);
 double GetResult(Poly *head, double n);
 Poly *PolySort(Poly* head);
 void PolyFree(Poly *head);
+double *FindRoot(Poly *head, int start, int end, int div, int n);
+double FindMin(Poly *head, int start, int end, int div);
 
 int isQEmpty(Queue *Q);
 int isQFull(Queue *Q);

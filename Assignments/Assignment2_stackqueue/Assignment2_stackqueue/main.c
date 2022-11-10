@@ -47,6 +47,20 @@ int main(int argc, const char * argv[]) {
     head = CreateAbsolPoly(arr, 5);
     ShowPoly(head);
     */
+    //근 구하기
+    /*
+    double *root = FindRoot(head, -10, 10, 100000, 2); //2개 구함 div = 100000 1을 100000으로 나눠서 검사
+    for(int i = 0 ; i < 2 ; i++){
+        printf("%d번째 근 : %f ", i+1, root[i]);
+    }
+    puts("");
+    free(root);
+    */
+    //최솟값 구하기
+    /*
+    double min = FindMin(head, -10, 10, 100000);
+    printf("최솟값 : %f \n", min);
+    */
     
     //그래프 그리기
     /*
@@ -111,6 +125,7 @@ int main(int argc, const char * argv[]) {
     for(int i = 0 ; i < MAX_SIZE ; i++){
         printf("%c", result[i]);
     }
+    free(result);
     puts("");
     */
     return 0;

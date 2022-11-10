@@ -192,3 +192,58 @@ void PolyFree(Poly *head){
         temp = next;
     }
 }
+
+double *FindRoot(Poly *head, int start, int end, int div, int n){
+    //다항식을 [start,end]구간에서 div수만큼 분리하여 검사하고 부호변화를 통해 f(x)=0에 가까운 x값을 최대 n개 리턴
+    if(start >= end){
+        printf("오류 : 세번째 인수의 값은 두번째 인수보다 커야합니다.\n");
+        return 0;
+    }
+    double *result;
+    result = (double*)calloc(n,sizeof(double));
+    int count = 0;
+    int sign; //-1음수 1양수
+    if (GetResult(head, start) < 0){ //start값이 음수일경우
+        sign = -1;
+    }
+    else{ //start값이 양수일경우
+        sign = 1;
+    }
+    for(double i = start ; i < end ; i += (double)1/div){
+        if(count < n){
+            if(sign == -1){
+                if(GetResult(head, i) > 0){
+                    result[count] = i;
+                    count++;
+                    sign = 1;
+                }
+            }
+            else{//sign == 1
+                if(GetResult(head, i) < 0){
+                    result[count] = i;
+                    count++;
+                    sign = -1;
+                }
+            }
+        }
+    }
+    return result;
+    
+}
+
+double FindMin(Poly *head, int start, int end, int div){
+    //다항식을 [start,end]구간에서 div수만큼 분리하여 검사하고 부호변화를 통해 f(x)가 최소인 x값을 리턴
+    if(start >= end){
+        printf("오류 : 세번째 인수의 값은 두번째 인수보다 커야합니다.\n");
+        return 0;
+    }
+    double result = GetResult(head, start);
+    for(double i = start ; i < end ; i += (double)1/div){
+        if(result > GetResult(head, i)){
+            result = GetResult(head, i);
+        }
+    }
+    return result;
+    
+}
+

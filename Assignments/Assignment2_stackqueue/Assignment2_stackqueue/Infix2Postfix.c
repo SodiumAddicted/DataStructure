@@ -1,9 +1,10 @@
 #include "StackQueue.h"
 
-char result[MAX_SIZE];
+
 char *Infix2Postfix(char arr[], int size){
     char currentChar;
     //result[size];
+    char *result = (char*)malloc(sizeof(char)*size);
     int count = 0;
     int Spriority = 0;
     int newPriority = 0;
