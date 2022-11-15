@@ -32,11 +32,11 @@ GLvoid Draw() {
     glVertex2f(0,-1);
     glEnd();
     glFinish();
-}*/
-
+}
+*/
 int main(int argc, const char * argv[]) {
     //다항식 계산
-    /*
+    
     double arr[5][2] = { //선형리스트를 활용한 구현(CreateAbsolPoly함수에 인자로 넣음)
         {6.7,4},
         {3.2,3},
@@ -46,22 +46,6 @@ int main(int argc, const char * argv[]) {
     };
     head = CreateAbsolPoly(arr, 5);
     ShowPoly(head);
-    free(head);
-    */
-    //근 구하기
-    /*
-    double *root = FindRoot(head, -10, 10, 100000, 2); //2개 구함 div = 100000 1을 100000으로 나눠서 검사
-    for(int i = 0 ; i < 2 ; i++){
-        printf("%d번째 근 : %f ", i+1, root[i]);
-    }
-    puts("");
-    free(root);
-    */
-    //최솟값 구하기
-    /*
-    double min = FindMin(head, -10, 10, 100000);
-    printf("최솟값 : %f \n", min);
-    */
     
     //그래프 그리기
     /*
@@ -73,6 +57,24 @@ int main(int argc, const char * argv[]) {
     PolyFree(head);
     free(head);
     */
+    //근 구하기
+    /*
+    int rootcount = 2;
+    double *root = FindRoot(head, -10, 10, 100000, rootcount); //2개 구함 div = 100000 1을 100000으로 나눠서 검사
+    for(int i = 0 ; i < rootcount ; i++){
+        printf("%d번째 근 : %f ", i+1, root[i]);
+    }
+    puts("");
+    free(root);
+    */
+    //최솟값 구하기
+    /*
+    double min = FindMin(head, -10, 10, 100000);
+    printf("최솟값 : %f \n", min);
+    */
+    
+    
+    
     
     //큐 구현
     /*
@@ -114,10 +116,10 @@ int main(int argc, const char * argv[]) {
     
     char arr2[100] = "(((a+b)*c+d−e)/(f+g)−(h+j)*(k−l))/(m−n)";
     ParenthesisMatching(arr2, 100);
-    /*
+    
     char arr3[100] = "(a−b*c)+d−(e−(f−g)/h)/(i*j)−k";
     ParenthesisMatching(arr3, 100);
-    */
+    
     
     //infix2postfix구현
     /*
