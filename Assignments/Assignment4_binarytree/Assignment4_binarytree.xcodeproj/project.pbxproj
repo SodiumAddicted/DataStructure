@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		EE909717292B161000685995 /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = EE909716292B161000685995 /* main.c */; };
+		EE90971F292B16A400685995 /* BinaryTree.c in Sources */ = {isa = PBXBuildFile; fileRef = EE90971E292B16A400685995 /* BinaryTree.c */; };
+		EE909721292B21B400685995 /* QueueFunc.c in Sources */ = {isa = PBXBuildFile; fileRef = EE909720292B21B400685995 /* QueueFunc.c */; };
+		EE909723292B2BBA00685995 /* Infix2Binarytree.c in Sources */ = {isa = PBXBuildFile; fileRef = EE909722292B2BBA00685995 /* Infix2Binarytree.c */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -26,6 +29,9 @@
 		EE909713292B161000685995 /* Assignment4_binarytree */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Assignment4_binarytree; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE909716292B161000685995 /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
 		EE90971D292B161F00685995 /* Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Header.h; sourceTree = "<group>"; };
+		EE90971E292B16A400685995 /* BinaryTree.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = BinaryTree.c; sourceTree = "<group>"; };
+		EE909720292B21B400685995 /* QueueFunc.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = QueueFunc.c; sourceTree = "<group>"; };
+		EE909722292B2BBA00685995 /* Infix2Binarytree.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = Infix2Binarytree.c; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +65,9 @@
 			isa = PBXGroup;
 			children = (
 				EE909716292B161000685995 /* main.c */,
+				EE909722292B2BBA00685995 /* Infix2Binarytree.c */,
+				EE909720292B21B400685995 /* QueueFunc.c */,
+				EE90971E292B16A400685995 /* BinaryTree.c */,
 				EE90971D292B161F00685995 /* Header.h */,
 			);
 			path = Assignment4_binarytree;
@@ -121,6 +130,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EE909723292B2BBA00685995 /* Infix2Binarytree.c in Sources */,
+				EE90971F292B16A400685995 /* BinaryTree.c in Sources */,
+				EE909721292B21B400685995 /* QueueFunc.c in Sources */,
 				EE909717292B161000685995 /* main.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
