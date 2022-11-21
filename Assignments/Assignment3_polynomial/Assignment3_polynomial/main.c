@@ -6,6 +6,7 @@
 int main(int argc, const char * argv[]) {
     /*
     //-------------------------------------링크드리스트를 활용한 다항식의 덧셈과 뺄셈-------------------------------------
+     
     int size;
     //다항식 입력부
     printf("항의 수 입력:");
@@ -31,13 +32,21 @@ int main(int argc, const char * argv[]) {
     Poly *sub = PolySub(head1, head2);
     printf("다항식 뺄셈 결과:\n");
     ShowPoly(sub);
+    
+    free(myArr1);
+    free(myArr2);
+    free(head1);
+    free(head2);
+    free(sum);
+    free(sub);
     //----------------------------------------------------------------------------------------------------------
     */
-    
+    /*
     //-------------------------------------선형리스트만을 이용한 다항식의 덧셈과 뺄셈--------------------------------------
-    //다항식 입력부
+     
     int size1;
     int size2;
+    //다항식 입력부
     printf("항의 수 입력:");
     scanf("%d", &size1);
     double **myArr_1 = InputNewArr(size1);
@@ -61,8 +70,12 @@ int main(int argc, const char * argv[]) {
     printf("다항식 뺄셈 결과:\n");
     ShowArr(resultArr_Sub, size1 + size2);
     
+    free(myArr_1);
+    free(myArr_2);
+    free(resultArr_Sum);
+    free(resultArr_Sub);
     //----------------------------------------------------------------------------------------------------------
-    
+    */
     
     
     return 0;
