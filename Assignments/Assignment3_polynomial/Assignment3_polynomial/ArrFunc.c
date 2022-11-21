@@ -30,6 +30,7 @@ double **SumArr(int size1, int size2, double **arr1, double **arr2){
     }
     
     for(i = 0 ; i < size1 ; i++){
+        isItGotExp = 0;
         currentExp = arr1[i][1];
         for(j = 0 ; j < size2 ; j++){
             if(arr2[j][1] == currentExp){
@@ -48,6 +49,7 @@ double **SumArr(int size1, int size2, double **arr1, double **arr2){
     isItGotExp = 0;
     //이제 list2에 있는 exp가 resultarr에 없으면 추가
     for(i = 0 ; i < size2 ; i++){
+        isItGotExp = 0;
         currentExp = arr2[i][1];
         for(j = 0 ; j < resultSize ; j++){
             if(resultArr[j][1] == currentExp){
@@ -78,6 +80,7 @@ double **SubArr(int size1, int size2, double **arr1, double **arr2){
     }
     
     for(i = 0 ; i < size1 ; i++){
+        isItGotExp = 0;
         currentExp = arr1[i][1];
         for(j = 0 ; j < size2 ; j++){
             if(arr2[j][1] == currentExp){
@@ -96,6 +99,7 @@ double **SubArr(int size1, int size2, double **arr1, double **arr2){
     isItGotExp = 0;
     //이제 list2에 있는 exp가 resultarr에 없으면 추가
     for(i = 0 ; i < size2 ; i++){
+        isItGotExp = 0;
         currentExp = arr2[i][1];
         for(j = 0 ; j < resultSize ; j++){
             if(resultArr[j][1] == currentExp){
@@ -134,6 +138,8 @@ double **SortArr(int size, double **arr){
 void ShowArr(double **resultArr, int size){ //정렬 후 보여줌
     int opCount = 0;
     resultArr = SortArr(size, resultArr);
+    printf("+::SHOW POLYNOMIAL::+\n");
+    printf("f(x) = ");
     for(int b = 0 ; b < size ; b++){
         if(!(resultArr[b][0] == 0)){
             if(opCount == 0){
