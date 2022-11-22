@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EE2B0A25292C5EB8002FA352 /* StackFunc.c in Sources */ = {isa = PBXBuildFile; fileRef = EE2B0A24292C5EB8002FA352 /* StackFunc.c */; };
+		EE2B0A27292C6974002FA352 /* StackFuncforNodes.c in Sources */ = {isa = PBXBuildFile; fileRef = EE2B0A26292C6974002FA352 /* StackFuncforNodes.c */; };
 		EE909717292B161000685995 /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = EE909716292B161000685995 /* main.c */; };
 		EE90971F292B16A400685995 /* BinaryTree.c in Sources */ = {isa = PBXBuildFile; fileRef = EE90971E292B16A400685995 /* BinaryTree.c */; };
 		EE909721292B21B400685995 /* QueueFunc.c in Sources */ = {isa = PBXBuildFile; fileRef = EE909720292B21B400685995 /* QueueFunc.c */; };
@@ -26,6 +28,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		EE2B0A24292C5EB8002FA352 /* StackFunc.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = StackFunc.c; sourceTree = "<group>"; };
+		EE2B0A26292C6974002FA352 /* StackFuncforNodes.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = StackFuncforNodes.c; sourceTree = "<group>"; };
 		EE909713292B161000685995 /* Assignment4_binarytree */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Assignment4_binarytree; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE909716292B161000685995 /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
 		EE90971D292B161F00685995 /* Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Header.h; sourceTree = "<group>"; };
@@ -69,6 +73,8 @@
 				EE909720292B21B400685995 /* QueueFunc.c */,
 				EE90971E292B16A400685995 /* BinaryTree.c */,
 				EE90971D292B161F00685995 /* Header.h */,
+				EE2B0A24292C5EB8002FA352 /* StackFunc.c */,
+				EE2B0A26292C6974002FA352 /* StackFuncforNodes.c */,
 			);
 			path = Assignment4_binarytree;
 			sourceTree = "<group>";
@@ -131,6 +137,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				EE909723292B2BBA00685995 /* Infix2Binarytree.c in Sources */,
+				EE2B0A25292C5EB8002FA352 /* StackFunc.c in Sources */,
+				EE2B0A27292C6974002FA352 /* StackFuncforNodes.c in Sources */,
 				EE90971F292B16A400685995 /* BinaryTree.c in Sources */,
 				EE909721292B21B400685995 /* QueueFunc.c in Sources */,
 				EE909717292B161000685995 /* main.c in Sources */,
