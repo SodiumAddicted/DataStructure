@@ -1,5 +1,5 @@
 #include "Header.h"
-
+//for levelorder
 Queue *QueueInit(void){
     Queue *result;
     result = (Queue*)malloc(sizeof(Queue)*_SIZE);
@@ -24,4 +24,9 @@ void Enqueue(Queue *Q, Node *node){
 Node *Dequeue(Queue *Q){
     Q -> front++;
     return &(Q -> data[Q -> front]);
+}
+
+void QFree(Queue *Q){
+    free(Q->data);
+    free(Q);
 }

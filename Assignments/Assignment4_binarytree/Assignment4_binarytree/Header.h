@@ -3,11 +3,10 @@
 #include <stdio.h>
 #include <stdlib.h>
 #define _SIZE 64
-typedef struct node *next;
 typedef struct node{
     char data;
-    next left;
-    next right;
+    struct node *left;
+    struct node *right;
 }Node;
 
 typedef struct queue{//Node큐 구현
@@ -22,11 +21,11 @@ typedef struct stack{//char스택 구현
     char *data;
 }Stack;
 
-typedef struct nstack{//Node스택 구현
+typedef struct nodestack{//char스택 구현
     int size;
     int top;
-    Node *data;
-}NStack;
+    Node **data; //노드를 담을 수 있는 data배열
+}NodeStack;
 
 Node *CreateNode(char data);
 void DestroyTree(Node *Remove);
@@ -43,18 +42,21 @@ char Pop(Stack *S);
 void ShowStackDetail(Stack *S);
 void SFree(Stack *S);
 
-NStack *CreateNewNStack(int size);
-int isNSFull(NStack *S);
-int isNSEmpty(NStack *S);
-void NPush(NStack *S, Node *N);
-Node *NPop(NStack *S);
-void NSFree(NStack *S);
+NodeStack *CreateNewNodeStack(int size);
+int isNSFull(NodeStack *S);
+int isNSEmpty(NodeStack *S);
+void NPush(NodeStack *S, Node *node);
+Node *NPop(NodeStack *S);
+void ShowNodeStackDetail(NodeStack *S);
+void NSFree(NodeStack *S);
 
 void InfixOrder(Node *root);
 void PrefixOrder(Node *root);
 void PostfixOrder(Node *root);
 void LevelOrder(Node *root);
 
-Node *Infix2Binarytree(char *infix);
-int Priority(char op1, char op2);
+Node *infix2binarytree(char *infixExpression);
+int isOp(char ch);
+int priority(char ch);
+void calc(NodeStack *operand, Stack *operator);
 #endif /* Header_h */
