@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		304445212935979E005A4854 /* GetSize.c in Sources */ = {isa = PBXBuildFile; fileRef = 304445202935979E005A4854 /* GetSize.c */; };
+		308DE23929370E8B00B303BC /* Huffman.c in Sources */ = {isa = PBXBuildFile; fileRef = 308DE23829370E8B00B303BC /* Huffman.c */; };
+		30FA4BDA29389585003828C6 /* LinkedList.c in Sources */ = {isa = PBXBuildFile; fileRef = 30FA4BD929389585003828C6 /* LinkedList.c */; };
 		EE2B0A25292C5EB8002FA352 /* StackFunc.c in Sources */ = {isa = PBXBuildFile; fileRef = EE2B0A24292C5EB8002FA352 /* StackFunc.c */; };
 		EE909717292B161000685995 /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = EE909716292B161000685995 /* main.c */; };
 		EE90971F292B16A400685995 /* BinaryTree.c in Sources */ = {isa = PBXBuildFile; fileRef = EE90971E292B16A400685995 /* BinaryTree.c */; };
@@ -27,6 +30,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		304445202935979E005A4854 /* GetSize.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = GetSize.c; sourceTree = "<group>"; };
+		308DE23829370E8B00B303BC /* Huffman.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = Huffman.c; sourceTree = "<group>"; };
+		30FA4BD929389585003828C6 /* LinkedList.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = LinkedList.c; sourceTree = "<group>"; };
 		EE2B0A24292C5EB8002FA352 /* StackFunc.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = StackFunc.c; sourceTree = "<group>"; };
 		EE909713292B161000685995 /* Assignment4_binarytree */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Assignment4_binarytree; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE909716292B161000685995 /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
@@ -67,8 +73,11 @@
 			isa = PBXGroup;
 			children = (
 				EE90971D292B161F00685995 /* Header.h */,
+				30FA4BD929389585003828C6 /* LinkedList.c */,
+				308DE23829370E8B00B303BC /* Huffman.c */,
 				EE909716292B161000685995 /* main.c */,
 				EE909722292B2BBA00685995 /* Infix2Binarytree.c */,
+				304445202935979E005A4854 /* GetSize.c */,
 				EE909720292B21B400685995 /* QueueFunc.c */,
 				EE90971E292B16A400685995 /* BinaryTree.c */,
 				EE2B0A24292C5EB8002FA352 /* StackFunc.c */,
@@ -102,7 +111,7 @@
 		EE90970B292B161000685995 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 1170;
+				LastUpgradeCheck = 1340;
 				ORGANIZATIONNAME = MAC;
 				TargetAttributes = {
 					EE909712292B161000685995 = {
@@ -133,11 +142,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				30FA4BDA29389585003828C6 /* LinkedList.c in Sources */,
 				EE909723292B2BBA00685995 /* Infix2Binarytree.c in Sources */,
 				EE2B0A25292C5EB8002FA352 /* StackFunc.c in Sources */,
 				EE90971F292B16A400685995 /* BinaryTree.c in Sources */,
 				EE909721292B21B400685995 /* QueueFunc.c in Sources */,
+				304445212935979E005A4854 /* GetSize.c in Sources */,
 				EE909717292B161000685995 /* main.c in Sources */,
+				308DE23929370E8B00B303BC /* Huffman.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -170,6 +182,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -228,6 +241,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -256,6 +270,7 @@
 		EE90971B292B161000685995 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -264,6 +279,7 @@
 		EE90971C292B161000685995 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};

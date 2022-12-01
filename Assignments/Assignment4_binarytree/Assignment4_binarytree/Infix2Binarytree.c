@@ -3,9 +3,7 @@
 Node *infix2binarytree(char *infixExpression){
     int size = 0; //infixExpression 크기
     Node *result = NULL;
-    while(infixExpression[size] != '\0'){
-        size++;
-    }
+    size = getSize(infixExpression);
     Stack *operator = CreateNewStack(size);
     NodeStack *operand = CreateNewNodeStack(size);
     for(int i = 0 ; i < size ; i++){
