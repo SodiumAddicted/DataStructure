@@ -36,13 +36,13 @@ int main(int argc, const char * argv[]) {
     
     
     
-    char paragraph[_SIZE];
+    char paragraph[200]; //200자까지 가능
     printf("좋아하는 문단 입력 : ");
-    fgets(paragraph, _SIZE, stdin); //공백포함입력
+    fgets(paragraph, 200, stdin); //공백포함입력
     
     Capsule **alphaList; //알파벳과 개수를 가지는 구조체
-    alphaList = (Capsule**)calloc(_SIZE,sizeof(Capsule*));
-    for(int i = 0 ; i < _SIZE ; i++){
+    alphaList = (Capsule**)calloc(200,sizeof(Capsule*));
+    for(int i = 0 ; i < 200 ; i++){
         alphaList[i] = (Capsule*)malloc(sizeof(Capsule));
     }
     
@@ -67,9 +67,9 @@ int main(int argc, const char * argv[]) {
     printf("^^Huffman Code Expression : ");
     Text2Code(head, paragraph);
     
-    char code[100];
+    char code[1000];
     printf("코드입력 : ");
-    fgets(code ,100, stdin);
+    fgets(code ,1000, stdin);
     
     printf("^^Alphabet Expression : ");
     Code2Text(head, code);
