@@ -24,9 +24,6 @@ void ShowList(LNode *head){
     }
 }
 
-void Code2Text(LNode *head, char *codes){
-    
-}
 
 void KillAllNode(LNode *head) {
     LNode *cur = head->next;
@@ -35,5 +32,64 @@ void KillAllNode(LNode *head) {
         free(cur);
         cur = next;
     }
+}
+
+char *Alpha2Code(LNode *head, char alpha){
+    LNode *cur = NULL;
+    cur = head;
+    while(cur -> next != NULL){
+        cur = cur -> next;
+        if(alpha == cur -> alpha){ //같으면
+            break;
+        }
+    }
+    return cur -> HuffmanCode;
+}
+
+char Code2Alpha(LNode *head, char *code){
+    LNode *cur = NULL;
+    cur = head;
+    while(cur -> next != NULL){
+        cur = cur -> next;
+        if(strcmp(code, cur -> HuffmanCode) == 0){ //같으면
+            return cur -> alpha;
+            //break;
+        }
+    }
+    return '\0';
+    
+}
+
+void Text2Code(LNode *head, char *text){
+    int i = 0;
+    int size = getSize(text);
+    char *result = (char*)malloc(sizeof(char)*10); //10글자
+    for(i = 0 ; i < size-1 ; i++){
+        strcpy(result,Alpha2Code(head, text[i]));
+        printf("%s", result);
+    }
+    free(result);
+    puts("");
+}
+
+
+void Code2Text(LNode *head, char *codes){
+    int startindex = 0;
+    int range = 1;
+    int size = getSize(codes);
+    char *code = (char*)calloc(10,sizeof(char));
+    strncpy(code,codes+startindex, range);
+    while(startindex + range < size+1){
+        if(Code2Alpha(head,code) != '\0'){
+            printf("%c", Code2Alpha(head, code));
+            startindex = startindex + range;
+            range = 0;
+        }
+        range++;
+        memset(code, 0, sizeof(char)*10);
+        strncpy(code,codes+startindex, range);
+    }
+    free(code);
+    puts("");
 }
 

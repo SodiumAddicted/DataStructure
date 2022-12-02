@@ -55,22 +55,24 @@ int main(int argc, const char * argv[]) {
     for(int i = 0 ; i < getCapsuleListSize(alphaList) ; i++){
         treeList[i] = (HuffmanNode*)malloc(sizeof(HuffmanNode));
     }
-    
     InitHuffmanTree(treeList, alphaList);//alphaList를 Huffman식 노드로 변경
     HuffmanNode *root = MakeHuffmanTree(treeList);
-    
     SetHuffmanCode(root, 0);
-    
     LNode *head = CreateHead();
-    InputCode(root, head);
+    InputCode(root, head); //리스트에 허프만코드 삽입
+    printf("-------code list-------\n");
     ShowList(head);
+    printf("-----------------------\n");
     
+    printf("^^Huffman Code Expression : ");
+    Text2Code(head, paragraph);
     
-    char code[200];
-    printf("코드입력:");
-    fgets(code ,200, stdin);
+    char code[100];
+    printf("코드입력 : ");
+    fgets(code ,100, stdin);
+    
+    printf("^^Alphabet Expression : ");
     Code2Text(head, code);
-    
     
     
     
@@ -78,6 +80,7 @@ int main(int argc, const char * argv[]) {
     
     KillHuffmanNode(root);
     KillAllNode(head);
+    free(treeList);
     KillCapsuleList(alphaList);
     
     return 0;

@@ -124,7 +124,7 @@ void ShowListDetail(Capsule **list){
 void Classification(Capsule **list, char *paragraph){
     int cursor = 0;
     int size = getSize(paragraph);
-    for(int i = 0 ; i < size ; i++){
+    for(int i = 0 ; i < size-1 ; i++){
         if(isInList(list, paragraph[i])){
             list[searchInList(list, paragraph[i])] -> count++;
         }
@@ -136,7 +136,6 @@ void Classification(Capsule **list, char *paragraph){
     }
     
 }
-
 int isInList(Capsule **list, char ch){
     int i = 0;
     while(list[i] != NULL){

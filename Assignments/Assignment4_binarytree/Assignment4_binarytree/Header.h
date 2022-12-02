@@ -110,4 +110,8 @@ void InputCode(HuffmanNode *root, LNode *head);
 
 void KillAllNode(LNode *head);
 void Code2Text(LNode *head, char *codes);
+void Text2Code(LNode *head, char *text);
+
+char *Alpha2Code(LNode *head, char alpha);
+char Code2Alpha(LNode *head, char *code);
 #endif /* Header_h */
