@@ -13,7 +13,6 @@ void ParenthesisMatching(char arr[], int size){
         if(currentChar == '('){
             Push(SParenthesis,currentChar);
             Push(SResult,currentChar);
-            //printf("(");
             match = 0;
             ShowStackDetail(SParenthesis);
             index[indexcount++] = count++;
@@ -23,15 +22,12 @@ void ParenthesisMatching(char arr[], int size){
                 match = 1;
                 Pop(SParenthesis);
             }
-            //printf(")");
             Push(SResult,currentChar);
             ShowStackDetail(SParenthesis);
             index[indexcount++] = count++;
         }
         else{
-            //printf("%c", currentChar);
-            //Push(SResult,currentChar);
-            ShowStackDetail(SParenthesis);
+            //ShowStackDetail(SParenthesis);
             count++;
         }
     }

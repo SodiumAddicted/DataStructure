@@ -9,8 +9,6 @@
 /* Begin PBXBuildFile section */
 		EE5D131B291AA7BC008D129F /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = EE5D131A291AA7BC008D129F /* main.c */; };
 		EE5D1323291AA9CC008D129F /* PolynomialFunc.c in Sources */ = {isa = PBXBuildFile; fileRef = EE5D1322291AA9CC008D129F /* PolynomialFunc.c */; };
-		EE5D1329291AC527008D129F /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE5D1327291AC299008D129F /* OpenGL.framework */; };
-		EE5D132C291AC529008D129F /* GLUT.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE5D1325291AC292008D129F /* GLUT.framework */; };
 		EE5D132F291AD504008D129F /* QueueFunc.c in Sources */ = {isa = PBXBuildFile; fileRef = EE5D132E291AD504008D129F /* QueueFunc.c */; };
 		EE98052D291B59950022B08E /* StackFunc.c in Sources */ = {isa = PBXBuildFile; fileRef = EE98052C291B59950022B08E /* StackFunc.c */; };
 		EE98052F291B5F240022B08E /* ParenthesisMatchingFunc.c in Sources */ = {isa = PBXBuildFile; fileRef = EE98052E291B5F240022B08E /* ParenthesisMatchingFunc.c */; };
@@ -47,8 +45,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EE5D132C291AC529008D129F /* GLUT.framework in Frameworks */,
-				EE5D1329291AC527008D129F /* OpenGL.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -121,7 +117,7 @@
 		EE5D130F291AA7BC008D129F /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 1170;
+				LastUpgradeCheck = 1340;
 				ORGANIZATIONNAME = MAC;
 				TargetAttributes = {
 					EE5D1316291AA7BC008D129F = {
@@ -190,6 +186,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -248,6 +245,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -278,6 +276,7 @@
 		EE5D131F291AA7BC008D129F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -286,6 +285,7 @@
 		EE5D1320291AA7BC008D129F /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
