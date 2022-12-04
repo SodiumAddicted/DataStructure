@@ -3,15 +3,13 @@
 Node *infix2binarytree(char *infixExpression){
     int size = 0; //infixExpression 크기
     Node *result = NULL;
-    size = getSize(infixExpression);
+    size = getSize(infixExpression); //사이즈 계산
     Stack *operator = CreateNewStack(size);
     NodeStack *operand = CreateNewNodeStack(size);
     for(int i = 0 ; i < size ; i++){
-        
         char curChar = infixExpression[i];
         //연산자면
         if(isOp(curChar)){
-            
             if(curChar == '('){
                 Push(operator, curChar);
             }
@@ -30,21 +28,16 @@ Node *infix2binarytree(char *infixExpression){
                     Push(operator, curChar);
                 }
             }
-            
         }
         //피연산자면
         else{
             NPush(operand, CreateNode(curChar));
         }
-        
     }
     // 연산종료시남은거 계산
     while(operator -> top != -1){
         calc(operand, operator);
     }
-    
-    
-    
     result = NPop(operand);
     return result;
 }
